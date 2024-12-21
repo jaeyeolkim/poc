@@ -27,6 +27,9 @@ public class DnsTestListener implements ApplicationListener<ApplicationStartedEv
         isRunning = false;
     }
 
+    /**
+     * java -Dsun.net.inetaddr.ttl=1 -Dsun.net.inetaddr.negative.ttl=1 -jar build/libs/actuator-0.0.1-SNAPSHOT.jar
+     */
     public class DnsTestRunner implements Runnable {
         String prevIp = "";
         @Override
