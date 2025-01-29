@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.concurrent.Executors;
 
 @Slf4j
 @Component
@@ -19,7 +18,7 @@ public class DnsTestListener implements ApplicationListener<ApplicationStartedEv
 
     @Override
     public void onApplicationEvent(ApplicationStartedEvent event) {
-        Executors.newSingleThreadExecutor().execute(dnsTestRunner);
+//        Executors.newSingleThreadExecutor().execute(dnsTestRunner);
     }
 
     @PreDestroy
